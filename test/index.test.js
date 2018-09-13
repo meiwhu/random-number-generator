@@ -1,4 +1,4 @@
-const RandomNumberGenerator = require('../dist/index');
+const RandomNumberGenerator = require('../index');
 
 describe('#GenerateNumber', () => {
   it('should generate 10 random numbers', (done) => {
