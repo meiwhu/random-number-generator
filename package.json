@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/meiwhu/random-number-generator.git"
+    "url": "git+https://github.com/meiwhu/random-number-stream.git"
   },
   "author": "meiwhu",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/meiwhu/random-number-generator/issues"
+    "url": "https://github.com/meiwhu/random-number-stream/issues"
   },
-  "homepage": "https://github.com/meiwhu/random-number-generator#readme",
+  "homepage": "https://github.com/meiwhu/random-number-stream#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
