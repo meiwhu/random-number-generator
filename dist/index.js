@@ -1,0 +1,63 @@
+'use strict';
+
+const crypto = require('crypto');
+
+var _require = require('stream');
+
+const Readable = _require.Readable;
+
+
+const OPTIONS = Symbol('options');
+const GENERATE = Symbol('number of generate numbers');
+const bytesPerTime = 100;
+
+class RandomNumberGenerator extends Readable {
+  /**
+   * @param {{total?: number}} options
+   */
+  constructor(options = {}) {
+    super({ objectMode: true, highWaterMark: 1000 });
+    this[OPTIONS] = options;
+    this[GENERATE] = 0;
+  }
+
+  /**
+   * @implements {Readable}
+   */
+  _read() {
+    const total = this[OPTIONS].total;
+
+    const generate = this[GENERATE];
+
+    let bytesNum = bytesPerTime;
+    let isLast = false;
+
+    if (total) {
+      if (total === generate) {
+        this.push(null);
+        return;
+      }
+      if (total - generate <= bytesPerTime) {
+        bytesNum = total - generate;
+        isLast = true;
+      }
+    }
+
+    const buf = crypto.randomBytes(bytesNum);
+
+    let ok = true;
+    for (let i = 0; i < bytesNum; i += 1) {
+      ok = this.push(buf[i]);
+      this[GENERATE] += 1;
+      if (!ok) {
+        return;
+      }
+    }
+
+    if (isLast) {
+      this.push(null);
+    }
+  }
+}
+
+module.exports = RandomNumberGenerator;
