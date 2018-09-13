@@ -1,5 +1,5 @@
 # random-number-generator
-Generate random numbers as a stream.
+Generate random numbers as a <b>objectMode</b> stream.
 
 # Install
 `npm install -S random-number-stream`
