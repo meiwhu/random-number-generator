@@ -8,6 +8,7 @@ Generate random numbers as a <b>objectMode</b> stream.
 
 # Usage
 ```js
+// return Stream object
 const RandomNumberGenerator = require('random-number-stream');
 
 // generate 100 numbers then close stream
