@@ -1,7 +1,7 @@
 [![travis-icon]][travis-link]
 ![Codecov](https://img.shields.io/codecov/c/github/meiwhu/random-number-stream.svg)
 
-# random-number-generator
+# random-number-stream
 Generate random numbers as a <b>objectMode</b> stream.
 
 # Install
@@ -10,13 +10,13 @@ Generate random numbers as a <b>objectMode</b> stream.
 # Usage
 ```js
 // return Stream object
-const RandomNumberGenerator = require('random-number-stream');
+const RandomNumberStream = require('random-number-stream');
 
 // generate 100 numbers then close stream
-new RandomNumberGenerator({ total: 100 });
+new RandomNumberStream({ total: 100 });
 
 // generate infinite numbers
-new RandomNumberGenerator();
+new RandomNumberStream();
 ```
 
 # Test

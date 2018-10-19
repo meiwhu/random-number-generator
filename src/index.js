@@ -5,7 +5,7 @@ const OPTIONS = Symbol('options');
 const GENERATE = Symbol('number of generate numbers');
 const bytesPerTime = 1000;
 
-class RandomNumberGenerator extends Readable {
+class RandomNumberStream extends Readable {
   /**
    * @param {{total?: number}} options
    */
@@ -53,4 +53,4 @@ class RandomNumberGenerator extends Readable {
   }
 }
 
-module.exports = RandomNumberGenerator;
+module.exports = RandomNumberStream;

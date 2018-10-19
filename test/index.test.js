@@ -1,8 +1,8 @@
-const RandomNumberGenerator = require('../index');
+const RandomNumberStream = require('../index');
 
 describe('#GenerateNumber', () => {
   it('should generate 10 random numbers', (done) => {
-    const reader = new RandomNumberGenerator({ total: 10 });
+    const reader = new RandomNumberStream({ total: 10 });
 
     reader.on('readable', () => {
       for (let i = 0; i < 10; i += 1) {
@@ -22,7 +22,7 @@ describe('#GenerateNumber', () => {
   });
 
   it('should generate more than 10000 numbers', (done) => {
-    const reader = new RandomNumberGenerator();
+    const reader = new RandomNumberStream();
 
     reader.on('readable', () => {
       for (let i = 0; i < 10000; i += 1) {
