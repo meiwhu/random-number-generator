@@ -3,7 +3,7 @@ const { Readable } = require('stream');
 
 const OPTIONS = Symbol('options');
 const GENERATE = Symbol('number of generate numbers');
-const bytesPerTime = 100;
+const bytesPerTime = 1000;
 
 class RandomNumberGenerator extends Readable {
   /**
