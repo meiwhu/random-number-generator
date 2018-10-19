@@ -1,4 +1,5 @@
 [![travis-icon]][travis-link]
+![Codecov](https://img.shields.io/codecov/c/github/meiwhu/random-number-stream.svg)
 
 # random-number-generator
 Generate random numbers as a <b>objectMode</b> stream.
