@@ -1,3 +1,5 @@
+[![travis-icon]][travis-link]
+
 # random-number-generator
 Generate random numbers as a <b>objectMode</b> stream.
 
@@ -17,3 +19,6 @@ new RandomNumberGenerator();
 
 # Test
 `npm test`
+
+[travis-icon]:https://travis-ci.org/meiwhu/random-number-stream.svg?branch=master
+[travis-link]:https://travis-ci.org/meiwhu/random-number-stream
