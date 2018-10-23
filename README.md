@@ -1,5 +1,5 @@
 [![travis-icon]][travis-link]
-![Codecov](https://img.shields.io/codecov/c/github/meiwhu/random-number-stream.svg)
+[![codecov-icon]][codecov-link]
 
 # random-number-stream
 Generate random numbers as a <b>objectMode</b> stream.
@@ -24,3 +24,5 @@ new RandomNumberStream();
 
 [travis-icon]:https://travis-ci.org/meiwhu/random-number-stream.svg?branch=master
 [travis-link]:https://travis-ci.org/meiwhu/random-number-stream
+[codecov-icon]:https://img.shields.io/codecov/c/github/meiwhu/random-number-stream.svg
+[codecov-link]:https://codecov.io/gh/meiwhu/random-number-stream
